@@ -1,3 +1,9 @@
+function verify(answers, rightAnswers) {
+    if (answers.toUpperCase() === rightAnswers) {
+        correctAnswers += 1;
+    }
+}
+
 /* 
   1. Store correct answers
    - When quiz begins, no answers are correct
@@ -18,29 +24,19 @@ const mainElement = document.querySelector('main');
 */
 
 const firstAnswer = prompt('is javascript a programming language?');
-if (firstAnswer.toUpperCase() === 'YES') {
-    correctAnswers += 1;
-}
+verify(firstAnswer, 'YES');
 
 const secondAnswer = prompt('what is a boolean considered?');
-if (secondAnswer.toUpperCase() === 'DATATYPE') {
-    correctAnswers += 1;
-}
+verify(secondAnswer, 'DATATYPE');
 
 const thirdAnswer = prompt('what is used to style webpages?');
-if (thirdAnswer.toUpperCase() === 'CSS') {
-    correctAnswers += 1;
-}
+verify(thirdAnswer, 'CSS');
 
 const fourthAnswer = prompt('is node.js used for backend programming?');
-if (fourthAnswer.toUpperCase() === 'YES') {
-    correctAnswers += 1;
-}
+verify(fourthAnswer, 'YES');
 
 const fifthAnswer = prompt('what keyword do you use to declare a constant variable?');
-if (fifthAnswer.toUpperCase() === 'CONST') {
-    correctAnswers += 1;
-}
+verify(fifthAnswer, 'CONST');
 
 /*
   5. Rank player based on number of correct answers
